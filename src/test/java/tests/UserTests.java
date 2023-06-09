@@ -1,0 +1,57 @@
+package tests;
+
+import io.qameta.allure.Owner;
+import models.lombok.UserCreateModel;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static specs.Spec.*;
+
+public class UserTests {
+    @Test
+    @Owner("renat.khairullin")
+    @DisplayName("Получить список пользователей")
+    void getUsersListTest() {
+
+        given()
+                .spec(request)
+                .when()
+                .get("/users?page=2")
+                .then()
+                .spec(response200Code)
+                .body("total", equalTo(12));
+    }
+    @Test
+    @Owner("renat.khairullin")
+    @DisplayName("Получить пользователей")
+    void getUserTest() {
+
+        given()
+                .spec(request)
+                .when()
+                .get("/users/2")
+                .then()
+                .spec(response200Code)
+                .body("data.email", equalTo("janet.weaver@reqres.in"));
+    }
+    @Test
+    @Owner("renat.khairullin")
+    @DisplayName("Создать пользователя")
+    void createUserTest() {
+        UserCreateModel creatUser = UserCreateModel.builder()
+                .name("morpheus")
+                .job("leader")
+                .build();
+
+        given()
+                .spec(request)
+                .body(creatUser)
+                .when()
+                .post("/users")
+                .then()
+                .spec(response201Code)
+                .body("name", equalTo("morpheus"));
+    }
+}
