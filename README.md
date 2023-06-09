@@ -48,7 +48,7 @@ gradle clean test
 
 > Для запуска необходимо нажать "Собрать сейчас".
 
-<a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/JenkinsSborka.png" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/Final_ProJect_Reqresin/"><img src="media/screenshots/JenkinsSborka.png" alt="Jenkins"/></a>
 
 <a id="telegram"></a>
 ## <img src="media/logo/Telegram.svg" width="25" height="25"/></a> Уведомления в Telegram
