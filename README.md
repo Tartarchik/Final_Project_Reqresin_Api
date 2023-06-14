@@ -42,7 +42,7 @@ gradle clean test
 ```
 
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/Final_ProJect_Reqresin/)
+## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/Final_ProJect_Reqresin/)
 
 <p align="center">
 
@@ -61,7 +61,7 @@ gradle clean test
 </p>
 
 <a id="allure"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/Final_ProJect_Reqresin/2/allure/) отчеты
+## <img src="media/logo/Allure.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/Students/job/Final_ProJect_Reqresin/2/allure/) отчеты
 
 ### Основное окно
 
