@@ -9,9 +9,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static specs.Spec.*;
 
+@Owner("renat.khairullin")
 public class LoginTests {
     @Test
-    @Owner("renat.khairullin")
     @DisplayName("Успешная авторизация пользователя")
     void successLoginTest() {
 
@@ -29,6 +29,7 @@ public class LoginTests {
                 .spec(response200Code)
                 .body("token", equalTo("QpwL5tke4Pnpja7X4"));
     }
+
     @Test
     @DisplayName("Авторизация пользователя без пароля")
     void unsuccessLoginTest() {

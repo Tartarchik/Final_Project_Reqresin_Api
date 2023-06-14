@@ -10,11 +10,10 @@ import static org.hamcrest.Matchers.*;
 import static specs.Spec.request;
 import static specs.Spec.*;
 
-
+@Owner("renat.khairullin")
 public class RegisterTests {
 
     @Test
-    @Owner("renat.khairullin")
     @DisplayName("Успешная регистрация пользователя")
     void successRegisterTest() {
 
@@ -34,7 +33,6 @@ public class RegisterTests {
     }
 
     @Test
-    @Owner("renat.khairullin")
     @DisplayName("Регистрация пользователя без пароля")
     void unSuccessRegisterTest() {
         UserModel user = UserModel.builder()

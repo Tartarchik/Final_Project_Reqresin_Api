@@ -11,9 +11,6 @@ compileJava {
     options.encoding = 'UTF-8'
 }
 
-compileTestJava {
-    options.encoding = 'UTF-8'
-}
 
 def restAssuredVersion = "5.3.0",
     allureVersion = "2.19.0",
@@ -34,7 +31,7 @@ allure {
 }
 
 dependencies {
-    testImplementation (
+    testImplementation(
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",

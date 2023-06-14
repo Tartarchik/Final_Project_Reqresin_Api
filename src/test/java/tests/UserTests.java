@@ -9,9 +9,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static specs.Spec.*;
 
+@Owner("renat.khairullin")
 public class UserTests {
     @Test
-    @Owner("renat.khairullin")
     @DisplayName("Получить список пользователей")
     void getUsersListTest() {
 
@@ -23,8 +23,8 @@ public class UserTests {
                 .spec(response200Code)
                 .body("total", equalTo(12));
     }
+
     @Test
-    @Owner("renat.khairullin")
     @DisplayName("Получить пользователей")
     void getUserTest() {
 
@@ -36,8 +36,8 @@ public class UserTests {
                 .spec(response200Code)
                 .body("data.email", equalTo("janet.weaver@reqres.in"));
     }
+
     @Test
-    @Owner("renat.khairullin")
     @DisplayName("Создать пользователя")
     void createUserTest() {
         UserCreateModel creatUser = UserCreateModel.builder()
